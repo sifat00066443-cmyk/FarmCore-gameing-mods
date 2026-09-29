@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIFAT GAMER MODS V2</title><link rel="stylesheet" href="style.css"></head><body>
+<header><a class="brand" href="./">SIFAT GAMER <span>MODS</span></a><button id="adminOpen">🔐 Admin</button></header>
+<main><section class="hero"><small>MINECRAFT BEDROCK DOWNLOADS</small><h1>Mods • Addons • Texture Packs • Clients</h1><p>Download your favourite SIFAT GAMER creations.</p><input id="search" placeholder="🔎 Search..."></section>
+<section class="toolbar"><div id="categories"></div><select id="sort"><option value="newest">Newest</option><option value="name">Name A-Z</option></select></section>
+<p id="status">Loading mods...</p><section id="modGrid"></section></main>
+<div id="adminModal" class="modal hidden"><div class="modalCard"><button class="close" data-close>×</button>
+<div id="loginView"><h2>Admin Login</h2><input id="email" type="email" placeholder="Admin email"><input id="password" type="password" placeholder="Password"><button id="loginBtn" class="primary">Login</button><p id="loginError"></p></div>
+<div id="panelView" class="hidden"><div class="panelHead"><h2 id="formTitle">Add Mod</h2><button id="logoutBtn">Logout</button></div>
+<form id="modForm"><input id="modId" type="hidden"><label>Name<input id="name" required placeholder="Infinity Client"></label><div class="two"><label>Version<input id="version" required placeholder="Bedrock 26.33+"></label><label>Category<select id="category"><option>Addon</option><option>Client</option><option>Texture Pack</option><option>Shader</option><option>Patch</option><option>Other</option></select></label></div>
+<label>Description<textarea id="description" rows="3"></textarea></label><label>MediaFire Link<input id="url" type="url" required placeholder="https://www.mediafire.com/..."></label><label>Thumbnail URL<input id="thumbnail" type="url" placeholder="https://.../your-thumbnail.jpg"></label><small>Thumbnail-এর direct image URL দিন।</small>
+<div><button class="primary" type="submit" id="saveBtn">Add Mod</button><button type="button" id="cancelEdit" class="hidden">Cancel</button></div></form><hr><h3>Manage Mods</h3><div id="adminList"></div></div></div></div>
+<script type="module" src="app.js"></script></body></html>
