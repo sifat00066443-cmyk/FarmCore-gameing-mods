@@ -1,12 +1,66 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIFAT GAMER MODS V2</title><link rel="stylesheet" href="style.css"></head><body>
-<header><a class="brand" href="./">SIFAT GAMER <span>MODS</span></a><button id="adminOpen">🔐 Admin</button></header>
-<main><section class="hero"><small>MINECRAFT BEDROCK DOWNLOADS</small><h1>Mods • Addons • Texture Packs • Clients</h1><p>Download your favourite SIFAT GAMER creations.</p><input id="search" placeholder="🔎 Search..."></section>
-<section class="toolbar"><div id="categories"></div><select id="sort"><option value="newest">Newest</option><option value="name">Name A-Z</option></select></section>
-<p id="status">Loading mods...</p><section id="modGrid"></section></main>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FarmCore Gaming | Minecraft Mods</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="#top"><span class="brandIcon">⛏️</span><span><strong>FarmCore Gaming</strong><small>Minecraft Mods</small></span></a>
+  <nav class="navLinks">
+    <a href="#top">⌂ <span>Home</span></a>
+    <a href="#mods">▦ <span>Browse</span> <b>⌄</b></a>
+    <a href="#leaderboards">🏆 <span>Leaderboards</span></a>
+    <a href="#community">👥 <span>Community</span></a>
+  </nav>
+  <button id="adminOpen" class="adminBtn">♙ <span>Admin Login</span></button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="heroGlow"></div>
+  <div class="heroContent">
+    <div class="eyebrow">MINECRAFT BEDROCK • MODS • ADDONS</div>
+    <h1>Discover and Download<br><span>the Best Minecraft Mods</span></h1>
+    <p>Explore FarmCore Gaming creations, addons, texture packs and more.</p>
+    <div class="searchBox"><span>⌕</span><input id="search" placeholder="Search mods, addons, authors..." aria-label="Search mods"></div>
+    <div class="heroActions"><a class="primaryAction" href="#mods">☷ &nbsp; Browse All Mods</a><button class="secondaryAction" id="heroAdmin">☁ &nbsp; Admin Upload</button></div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="sectionHead"><div><h2>▦ &nbsp; Categories</h2><p>Explore mods and addons by category.</p></div></div>
+  <div class="categoryGrid">
+    <button class="categoryCard" data-cat="Addon"><span>⚙️</span><strong>Addons</strong><em>→</em></button>
+    <button class="categoryCard" data-cat="Client"><span>✨</span><strong>Clients</strong><em>→</em></button>
+    <button class="categoryCard" data-cat="Adventure"><span>⚔️</span><strong>Adventure</strong><em>→</em></button>
+    <button class="categoryCard" data-cat="Shader"><span>🚀</span><strong>Shaders</strong><em>→</em></button>
+    <button class="categoryCard" data-cat="Texture Pack"><span>🧱</span><strong>Texture Packs</strong><em>→</em></button>
+    <button class="categoryCard" data-cat="Other"><span>🐾</span><strong>Other</strong><em>→</em></button>
+  </div>
+</section>
+
+<section class="filterBar" id="mods">
+  <div><label>Category</label><div id="categoriesDynamic" class="chips"></div></div>
+  <div class="sortWrap"><label>Sort</label><select id="sort"><option value="newest">Newest</option><option value="name">Name A-Z</option></select></div>
+</section>
+
+<section class="section trending" id="leaderboards">
+  <div class="sectionHead"><div><h2>🔥 &nbsp; Trending Mods</h2><p>Latest and popular FarmCore Gaming releases.</p></div><a href="#mods">View All →</a></div>
+  <p id="status">Loading mods...</p>
+  <section id="modGrid"></section>
+</section>
+
+<section class="community" id="community"><div><h2>Build a better Minecraft.</h2><p>Download, explore and share your favourite FarmCore Gaming creations.</p></div><a href="#mods">Explore Mods →</a></section>
+</main>
+
+<footer><div class="footerBrand"><span class="brandIcon">⛏️</span><div><strong>FarmCore Gaming</strong><small>Minecraft Mods</small></div></div><p>Better Mods. Better Minecraft.<br>© 2026 FarmCore Gaming. All rights reserved.</p><div class="footerLinks"><a href="#top">Home</a><a href="#mods">Browse Mods</a><a href="#community">Community</a><a href="#top" id="footerAdmin">Admin Login</a></div></footer>
+
 <div id="adminModal" class="modal hidden"><div class="modalCard"><button class="close" data-close>×</button>
-<div id="loginView"><h2>Admin Login</h2><input id="email" type="email" placeholder="Admin email"><input id="password" type="password" placeholder="Password"><button id="loginBtn" class="primary">Login</button><p id="loginError"></p></div>
-<div id="panelView" class="hidden"><div class="panelHead"><h2 id="formTitle">Add Mod</h2><button id="logoutBtn">Logout</button></div>
-<form id="modForm"><input id="modId" type="hidden"><label>Name<input id="name" required placeholder="Infinity Client"></label><div class="two"><label>Version<input id="version" required placeholder="Bedrock 26.33+"></label><label>Category<select id="category"><option>Addon</option><option>Client</option><option>Texture Pack</option><option>Shader</option><option>Patch</option><option>Other</option></select></label></div>
-<label>Description<textarea id="description" rows="3"></textarea></label><label>MediaFire Link<input id="url" type="url" required placeholder="https://www.mediafire.com/..."></label><label>Thumbnail URL<input id="thumbnail" type="url" placeholder="https://.../your-thumbnail.jpg"></label><small>Thumbnail-এর direct image URL দিন।</small>
-<div><button class="primary" type="submit" id="saveBtn">Add Mod</button><button type="button" id="cancelEdit" class="hidden">Cancel</button></div></form><hr><h3>Manage Mods</h3><div id="adminList"></div></div></div></div>
-<script type="module" src="app.js"></script></body></html>
+<div id="loginView"><div class="loginIcon">🔐</div><h2>Admin Login</h2><p class="muted">Sign in to manage FarmCore Gaming mods.</p><input id="email" type="email" placeholder="Admin email"><input id="password" type="password" placeholder="Password"><button id="loginBtn" class="primary">Login</button><p id="loginError" class="error"></p></div>
+<div id="panelView" class="hidden"><div class="panelHead"><div><span class="eyebrow">ADMIN PANEL</span><h2 id="formTitle">Add Mod</h2></div><button id="logoutBtn">Logout</button></div>
+<form id="modForm"><input id="modId" type="hidden"><label>Name<input id="name" required placeholder="Infinity Client"></label><div class="two"><label>Version<input id="version" required placeholder="Bedrock 26.33+"></label><label>Category<select id="category"><option>Addon</option><option>Client</option><option>Texture Pack</option><option>Shader</option><option>Patch</option><option>Other</option></select></label></div><label>Description<textarea id="description" rows="3"></textarea></label><label>MediaFire Link<input id="url" type="url" required placeholder="https://www.mediafire.com/..."></label><label>Thumbnail URL<input id="thumbnail" type="url" placeholder="https://.../thumbnail.jpg"></label><small>Thumbnail-এর direct image URL দিন।</small><div><button class="primary" type="submit" id="saveBtn">Add Mod</button><button type="button" id="cancelEdit" class="hidden">Cancel</button></div></form><hr><h3>Manage Mods</h3><div id="adminList"></div></div></div></div>
+<script type="module" src="app.js"></script>
+<script>document.getElementById('heroAdmin').onclick=()=>document.getElementById('adminOpen').click();document.getElementById('footerAdmin').onclick=(e)=>{e.preventDefault();document.getElementById('adminOpen').click()};document.querySelectorAll('.categoryCard').forEach(b=>b.onclick=()=>{const c=b.dataset.cat;window.__setCategory&&window.__setCategory(c)});</script>
+</body></html>

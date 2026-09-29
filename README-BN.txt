@@ -1,4 +1,4 @@
-SIFAT GAMER MODS V2 - NO STORAGE
+FarmCore Gaming MODS V2 - NO STORAGE
 
 এই ভার্সনে Firebase Storage ব্যবহার করা হয় না, তাই Blaze billing/Storage upgrade দরকার নেই।
 
